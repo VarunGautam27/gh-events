@@ -1,8 +1,13 @@
-name: Events Demo 1
+4name: Events Demo 1
 on:
   pull_request:
     types: opened
   workflow_dispatch:
+  push:
+    branches:  
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
